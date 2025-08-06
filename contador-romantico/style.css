@@ -1,0 +1,229 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff5f5;
+    color: #4a4a4a;
+    line-height: 1.6;
+    background-image: linear-gradient(to bottom, #fff5f5, #ffe8e8);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: #e25c67;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #e25c67;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Seção de foto */
+.photo-section {
+    margin-bottom: 40px;
+}
+
+.photo-container {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.photo-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.photo-container:hover img {
+    transform: scale(1.02);
+}
+
+.photo-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(226, 92, 103, 0.2));
+    pointer-events: none;
+}
+
+/* Seção da frase */
+.quote-section {
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+blockquote {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: #e25c67;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+blockquote::before,
+blockquote::after {
+    content: '"';
+    font-size: 2.5rem;
+    color: rgba(226, 92, 103, 0.3);
+}
+
+.author {
+    font-style: italic;
+    color: #888;
+    font-size: 1.1rem;
+}
+
+/* Seção do contador */
+.counter-section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.time-block {
+    background: linear-gradient(135deg, #e25c67, #ff8a95);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 100px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(226, 92, 103, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.time-block:hover {
+    transform: translateY(-5px);
+}
+
+.time-block span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: block;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.time-block p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid rgba(226, 92, 103, 0.2);
+}
+
+.footer-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+    color: #e25c67;
+    margin-bottom: 15px;
+}
+
+.hearts {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+    
+    blockquote {
+        font-size: 1.5rem;
+    }
+    
+    .counter {
+        gap: 10px;
+    }
+    
+    .time-block {
+        min-width: 80px;
+        padding: 10px;
+    }
+    
+    .time-block span {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    blockquote {
+        font-size: 1.3rem;
+    }
+    
+    .time-block {
+        min-width: 70px;
+    }
+    
+    .time-block span {
+        font-size: 1.8rem;
+    }
+}
+
